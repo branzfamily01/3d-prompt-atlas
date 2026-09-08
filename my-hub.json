@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "title": "3D Prompt Atlas",
+  "category": "Tools",
+  "summary": "3D制作の公開事例を検索・比較し、複数の設計原理からAstra等向けの制作指示を組み立てるワークベンチ。",
+  "tags": ["3D", "Astra", "Three.js", "Blender", "Prompt", "Reference"],
+  "color": "blue",
+  "status": "development",
+  "visibility": "limited",
+  "manualUrl": "manual.html"
+}
