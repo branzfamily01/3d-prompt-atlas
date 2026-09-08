@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <title>3D Prompt Atlas｜使い方</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><p class="eyebrow">MANUAL</p><h1>3D Prompt Atlas｜使い方</h1></div>
+    <a class="help-link" href="index.html">← アプリへ</a>
+  </header>
+  <main>
+    <section class="panel hero">
+      <span class="badge">まずこれだけ</span>
+      <h2>3ステップで使えます</h2>
+      <ol class="principle-list" style="font-size:1rem">
+        <li><strong>何を作りたいか書く</strong><br>例：「小5向けの3D白地図ゲーム。iPadでタップ操作」</li>
+        <li><strong>近い作例を2〜5件選ぶ</strong><br>「比較に追加」を押します。1件の丸写しではなく、複数から技法を集めます。</li>
+        <li><strong>制作指示を生成してコピー</strong><br>必要な技法だけチェックし、「制作指示を生成」→「コピー」。Astraなどへ貼り付けます。</li>
+      </ol>
+    </section>
+
+    <section class="panel proven-panel">
+      <p class="eyebrow">SCREEN GUIDE</p>
+      <h2>画面の見方</h2>
+      <div class="principles">
+        <div class="principle"><span><strong>何を作りたい？</strong><br><small class="meta">目的を書く入口。短文でも構いません。</small></span></div>
+        <div class="principle"><span><strong>作例カード</strong><br><small class="meta">モデル、作者、用途、技法、出典を確認できます。</small></span></div>
+        <div class="principle"><span><strong>比較に追加</strong><br><small class="meta">採用候補を集めます。2〜5件が扱いやすいです。</small></span></div>
+        <div class="principle"><span><strong>Prompt Compiler</strong><br><small class="meta">選んだ作例の設計原理から、実行用の指示を組み立てます。</small></span></div>
+      </div>
+    </section>
+
+    <section class="panel proven-panel">
+      <p class="eyebrow">IMPORTANT</p>
+      <h2>このアプリがしないこと</h2>
+      <ul class="principle-list">
+        <li>公開作例を「必ず同じ結果になる魔法のプロンプト」とは扱いません。</li>
+        <li>第三者の画像・コード・全文を、権利確認なしに勝手に再配布しません。</li>
+        <li>作者原文と、公開情報から再構成されたbriefを同じものとして扱いません。</li>
+      </ul>
+      <p class="notice">各カードの「出典 ↗」から元ページを確認してください。GitHubコードを再利用する場合は、各リポジトリのライセンス確認が必要です。</p>
+    </section>
+
+    <section class="panel proven-panel">
+      <p class="eyebrow">MY PROVEN LIBRARY</p>
+      <h2>うまくいったら保存</h2>
+      <p>実際にAstra等で試して「この条件は効いた」と分かったら、タイトルとメモを保存します。公開作例とは別に、自分専用の成功パターンが育っていきます。</p>
+      <p class="meta">現在のMVPでは、お気に入り・成功例はこのブラウザ端末のlocalStorageに保存されます。端末を変えると自動同期されません。</p>
+    </section>
+
+    <section class="panel proven-panel">
+      <p class="eyebrow">WHEN SOMETHING GOES WRONG</p>
+      <h2>困ったとき</h2>
+      <ul class="principle-list">
+        <li><strong>作例が出ない：</strong>検索語を減らすか「リセット」を押します。</li>
+        <li><strong>制作指示が生成されない：</strong>先に作例を1件以上「比較に追加」します。</li>
+        <li><strong>データ読み込みエラー：</strong>HTMLを端末のファイルから直接開かず、Webサーバー上で開きます。</li>
+        <li><strong>お気に入りが消えた：</strong>ブラウザデータ削除や別端末ではlocalStorageが引き継がれません。</li>
+      </ul>
+    </section>
+
+    <section class="panel proven-panel">
+      <p class="eyebrow">TERMS</p>
+      <h2>用語</h2>
+      <p><strong>source-derived brief：</strong>作者が公開した正確なプロンプト本文ではなく、公開情報を基に整理された制作指示。</p>
+      <p><strong>設計原理：</strong>題材そのものではなく、「なぜその作例が成立しているか」を自分の用途へ転用できる形にした考え方。</p>
+      <p><strong>Prompt Compiler：</strong>複数の設計原理と自分の目的をまとめ、実行用の制作指示へ組み替える機能。</p>
+    </section>
+  </main>
+  <footer><p>3D Prompt Atlas manual · 2026-09-08</p></footer>
+</body>
+</html>
