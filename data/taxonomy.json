@@ -1,0 +1,9 @@
+{
+  "models": ["GPT-6 Astra", "Claude Fable 5.1", "Kimi K3", "Claude Opus 5", "Claude Fable 5"],
+  "technologies": ["Three.js", "WebGPU", "Blender", "Unity", "Unreal Engine", "Godot", "Roblox", "WebGL"],
+  "useCases": ["Game", "Education", "3D Web", "World", "Architecture", "Character", "Product", "Simulation", "Visualization", "Video Previs"],
+  "interactions": ["Explore", "Tap", "Drag", "Orbit", "First Person", "Collect", "Combat", "Inspect", "Build", "Voice Iteration"],
+  "worldTypes": ["Voxel", "Open World", "Nature", "Interior", "City", "Map", "Tabletop", "Underwater"],
+  "assetTypes": ["Character", "Terrain", "Building", "Vehicle", "Nature", "Product", "Anatomy", "Creature"],
+  "devices": ["iPhone", "iPad", "Desktop", "Browser", "VR-ready concept"]
+}
