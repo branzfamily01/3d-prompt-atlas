@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <title>3D Prompt Atlas</title>
+  <meta name="description" content="3D制作事例を検索・比較し、複数の設計原理から制作指示を組み立てるワークベンチ。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">REFERENCE → PRINCIPLE → PROMPT</p>
+      <h1>3D Prompt Atlas</h1>
+    </div>
+    <a class="help-link" href="manual.html">？ 使い方</a>
+  </header>
+
+  <main>
+    <section class="hero panel">
+      <div class="hero-copy">
+        <span class="badge">Prompt Compiler</span>
+        <h2>何を作りたい？</h2>
+        <p>1つの作例をコピーするのではなく、近い事例を横断して「使える技法」を組み合わせます。</p>
+      </div>
+      <label class="goal-box">
+        <span>作りたいもの</span>
+        <textarea id="goalInput" rows="4" placeholder="例：小5向け。日本地図を3Dで探索して、都道府県や地形を覚えるiPad向けゲーム。かわいく、短時間で遊べる。"></textarea>
+      </label>
+      <div class="quick-chips" aria-label="用途の例">
+        <button data-add="教育 ゲーム iPad">📚 教育</button>
+        <button data-add="3D ゲーム ブラウザ">🎮 ゲーム</button>
+        <button data-add="地図 探索 世界">🗺 地図</button>
+        <button data-add="Three.js Web">🌐 3D Web</button>
+        <button data-add="Blender 編集可能">🧊 Blender</button>
+        <button data-add="iPhone モバイル タップ">📱 モバイル</button>
+      </div>
+      <div class="hero-actions">
+        <button id="recommendBtn" class="primary">近い作例を探す</button>
+        <button id="clearBtn" class="ghost">リセット</button>
+      </div>
+    </section>
+
+    <section class="toolbar panel" aria-label="検索と絞り込み">
+      <label>
+        <span>キーワード検索</span>
+        <input id="searchInput" type="search" placeholder="game, map, iPad, nature…">
+      </label>
+      <label>
+        <span>モデル</span>
+        <select id="modelFilter"><option value="">すべて</option></select>
+      </label>
+      <label>
+        <span>用途</span>
+        <select id="useCaseFilter"><option value="">すべて</option></select>
+      </label>
+      <label class="checkline">
+        <input id="favoritesOnly" type="checkbox">
+        <span>★ お気に入りだけ</span>
+      </label>
+    </section>
+
+    <section class="status-row">
+      <p id="resultCount">読み込み中…</p>
+      <p><strong id="selectedCount">0</strong> 件を比較中</p>
+    </section>
+
+    <section id="cards" class="card-grid" aria-live="polite"></section>
+
+    <section id="compiler" class="compiler panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COMPOSE</p>
+          <h2>選んだ作例から制作指示を作る</h2>
+        </div>
+        <button id="generateBtn" class="primary">制作指示を生成</button>
+      </div>
+
+      <div id="principles" class="principles empty-state">
+        作例を2〜5件選ぶと、採用候補の技法がここに並びます。
+      </div>
+
+      <div class="output-wrap">
+        <div class="output-head">
+          <strong>Astra / 3D制作向けプロンプト</strong>
+          <button id="copyBtn" class="ghost">コピー</button>
+        </div>
+        <textarea id="promptOutput" rows="22" readonly placeholder="ここに制作指示が生成されます。"></textarea>
+      </div>
+    </section>
+
+    <section class="panel proven-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MY PROVEN LIBRARY</p>
+          <h2>自分で成功した型を残す</h2>
+        </div>
+      </div>
+      <div class="proven-form">
+        <input id="provenTitle" placeholder="例：iPad白地図ゲーム v1">
+        <textarea id="provenNote" rows="3" placeholder="何が効いたか、次回も残したい条件"></textarea>
+        <button id="saveProvenBtn" class="secondary">成功例として保存</button>
+      </div>
+      <div id="provenList" class="proven-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>3D Prompt Atlas · source references are kept separate from your own prompts.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
